@@ -3,32 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Login - Igreja</title>
 </head>
 <body>
-    <form action="https://api.sheetmonkey.io/form/rexRdbUKvJca9vXJV2tfaW" method="post">
-     <div class="aba">
-      
-    <div class="logim">
-          <h1>Fazer Logim Da Igreja</h1>
-        <form>
-        <label for="email">Email:</label>
-        <input class="gmail" type="email" name="email" id="email" placeholder="seu@email.com" required>
-          <label for="senha">Senha:</label>
-          <input class="senha" type="password" name="senha" id="senha" placeholder="sua senha" required>
-            <label for="numero">Número:</label>
-            <input class="nuemero" type="numbero" name="numero" id="numero" placeholder="seu número" required>
-              <label for="estado">Estado:</label>
-              <input class="estado" type="text" name="estado" id="estado" placeholder="seu estado" required>
-              <label for="endereco">Endereço:</label>
-              <input class="endereco" type="text" name="endereco" id="endereco" placeholder="sua rua/avenida" required>
-              <label for="numero-casa">Número da Casa:</label>
-              <input class="numero-casa" type="number" name="numero-casa" id="numero-casa" placeholder="nº da casa" required>
-              <label for="bairro">Bairro:</label>
-              <input class="bairro" type="text" name="bairro" id="bairro" placeholder="seu bairro" required>
-              <button type="submit" class="btn-enviar">Enviar</button>
-    </div> 
-</div></form>
+    <div class="container-login">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Bem-vindo</h1>
+                <p>Portal de Login - Igreja</p>
+            </div>
+
+            <form action="https://api.sheetmonkey.io/form/rexRdbUKvJca9vXJV2tfaW" method="post" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Sua senha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numero">Telefone</label>
+                    <input type="tel" name="numero" id="numero" placeholder="(11) 98765-4321" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" placeholder="São Paulo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" placeholder="Rua/Avenida" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numero-casa">Número</label>
+                    <input type="number" name="numero-casa" id="numero-casa" placeholder="Número da casa" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Seu bairro" required>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
