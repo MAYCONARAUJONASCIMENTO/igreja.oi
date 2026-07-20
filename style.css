@@ -79,6 +79,46 @@ label {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
 }
 
+/* Otimização Específica para iPhone */
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+    .logim {
+        width: 95vw;
+        height: auto;
+        padding: 25px 15px;
+        border-radius: 20px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+    
+    label {
+        font-size: 13px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+    
+    input {
+        width: 92%;
+        height: 42px;
+        font-size: 16px;
+        margin: 8px auto;
+        padding: 0 15px;
+        border: none;
+    }
+    
+    .btn-enviar {
+        width: 92%;
+        margin-top: 18px;
+        padding: 12px 20px;
+        font-size: 15px;
+        border-radius: 25px;
+    }
+}
+
 /* Responsivo para Celulares Pequenos (até 480px) */
 @media (max-width: 480px) {
     .logim {
