@@ -1,218 +1,217 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255);
     box-sizing: border-box;
 }
+
 body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 20px;
 }
-.aba {
+
+.container-login {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 500px;
 }
-h1{
-    color: rgb(0, 0, 0);
-    background-color: aliceblue;
-    font-size: 25px;
-    font-family: 'Courier New', Courier, monospace;
+
+.login-box {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    padding: 50px 40px;
+    width: 100%;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-header {
     text-align: center;
-}
-.logim {
-    color: black;
-    display: flex;
-   width: 500px;
-   height: auto;
-   min-height: 900px;
-   padding: 40px 20px;
-   background: rgba(255, 255, 255, 0.1);
-   backdrop-filter: blur(10px);
-   border: 1px solid rgba(255, 255, 255, 0.2);
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
-   text-align: center;
-   border-radius: 25px;
-   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-   overflow-y: auto;
-}
-input{
-    border-color: aliceblue;
-    color: rgb(0, 0, 0);
-    display: flex;
-    background-color: aliceblue;
-    margin: 10px;
-        border-radius: 30px;
-    height: 35px;
-    width: 335px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    margin-bottom: 40px;
 }
 
-label {
-    color: rgb(0, 0, 0);
-    font-size: 16px;
+.login-header h1 {
+    color: #1e3a8a;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #64748b;
+    font-size: 14px;
     font-weight: 500;
-    margin-top: 15px;
-    margin-bottom: 5px;
-        
-    font-family: 'Courier New', Courier, monospace;
 }
 
-.btn-enviar {
-    margin-top: 25px;
-    padding: 12px 30px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.btn-login {
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    border: none;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
     cursor: pointer;
+    margin-top: 10px;
     transition: all 0.3s ease;
-    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.btn-enviar:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 
-/* Otimização Específica para iPhone */
-@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
-    .logim {
-        width: 95vw;
-        height: auto;
-        padding: 25px 15px;
-        border-radius: 20px;
-    }
-    
-    h1 {
-        font-size: 20px;
-        padding: 12px;
-        margin-bottom: 10px;
-        border-radius: 15px;
-    }
-    
-    label {
-        font-size: 13px;
-        margin-top: 12px;
-        margin-bottom: 6px;
-    }
-    
-    input {
-        width: 92%;
-        height: 42px;
-        font-size: 16px;
-        margin: 8px auto;
-        padding: 0 15px;
-        border: none;
-    }
-    
-    .btn-enviar {
-        width: 92%;
-        margin-top: 18px;
-        padding: 12px 20px;
-        font-size: 15px;
-        border-radius: 25px;
-    }
+.btn-login:active {
+    transform: translateY(0);
 }
 
-/* Responsivo para Celulares Pequenos (até 480px) */
+/* Responsivo para Celulares (até 480px) */
 @media (max-width: 480px) {
-    .logim {
-        width: 90vw;
-        height: auto;
-        padding: 30px 20px;
+    body {
+        padding: 15px;
     }
-    
-    input {
-        width: 90%;
-        height: 40px;
+
+    .login-box {
+        padding: 35px 20px;
+    }
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+
+    .login-header p {
+        font-size: 13px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input {
+        padding: 11px 14px;
         font-size: 16px;
     }
-    
-    h1 {
-        font-size: 18px;
-        padding: 10px;
-    }
-    
-    label {
-        font-size: 14px;
-    }
-    
-    .btn-enviar {
-        width: 90%;
-        padding: 12px 20px;
+
+    .btn-login {
+        padding: 12px 16px;
         font-size: 14px;
     }
 }
 
 /* Responsivo para Celulares (481px até 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-    .logim {
-        width: 85vw;
-        height: auto;
-        padding: 30px 25px;
-        max-width: 450px;
+    .login-box {
+        padding: 40px 30px;
     }
-    
-    input {
-        width: 85%;
-        height: 40px;
-        font-size: 16px;
+
+    .login-header h1 {
+        font-size: 26px;
     }
-    
-    h1 {
-        font-size: 22px;
-        padding: 10px;
-    }
-    
-    label {
-        font-size: 15px;
-    }
-    
-    .btn-enviar {
-        width: 85%;
-        padding: 12px 25px;
+
+    .form-group input {
         font-size: 15px;
     }
 }
 
 /* Responsivo para Tablets (769px até 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .logim {
-        width: 75vw;
-        height: auto;
-        padding: 35px 30px;
-        max-width: 500px;
+    .login-box {
+        padding: 45px 35px;
     }
-    
-    input {
-        width: 85%;
-        height: 40px;
-    }
-    
-    h1 {
-        font-size: 24px;
+
+    .login-header h1 {
+        font-size: 28px;
     }
 }
 
-/* Desktop (1025px ou mais) */
-@media (min-width: 1025px) {
-    .logim {
-        width: 500px;
-        height: auto;
-        min-height: 900px;
-        padding: 40px 20px;
+/* Otimização Específica para iPhone */
+@media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+    .login-box {
+        padding: 30px 15px;
     }
-    
-    input {
-        width: 335px;
-        height: 35px;
+
+    .login-header {
+        margin-bottom: 30px;
+    }
+
+    .login-header h1 {
+        font-size: 22px;
+    }
+
+    .form-group {
+        gap: 12px;
+    }
+
+    .form-group input {
+        padding: 12px 14px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    .btn-login {
+        padding: 12px 16px;
+        font-size: 13px;
+        margin-top: 5px;
     }
 }
