@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     background-color: rgb(255, 255, 255);
-
+    box-sizing: border-box;
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 .aba {
     display: flex;
@@ -76,4 +77,97 @@ label {
 .btn-enviar:hover {
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+}
+
+/* Responsivo para Celulares Pequenos (até 480px) */
+@media (max-width: 480px) {
+    .logim {
+        width: 90vw;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    input {
+        width: 90%;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    label {
+        font-size: 14px;
+    }
+    
+    .btn-enviar {
+        width: 90%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Responsivo para Celulares (481px até 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .logim {
+        width: 85vw;
+        height: auto;
+        padding: 30px 25px;
+        max-width: 450px;
+    }
+    
+    input {
+        width: 85%;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 22px;
+        padding: 10px;
+    }
+    
+    label {
+        font-size: 15px;
+    }
+    
+    .btn-enviar {
+        width: 85%;
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+}
+
+/* Responsivo para Tablets (769px até 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logim {
+        width: 75vw;
+        height: auto;
+        padding: 35px 30px;
+        max-width: 500px;
+    }
+    
+    input {
+        width: 85%;
+        height: 40px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Desktop (1025px ou mais) */
+@media (min-width: 1025px) {
+    .logim {
+        width: 500px;
+        height: 500px;
+    }
+    
+    input {
+        width: 335px;
+        height: 35px;
+    }
 }
