@@ -27,16 +27,19 @@ h1{
     color: black;
     display: flex;
    width: 500px;
-   height: 500px;
+   height: auto;
+   min-height: 900px;
+   padding: 40px 20px;
    background: rgba(255, 255, 255, 0.1);
    backdrop-filter: blur(10px);
    border: 1px solid rgba(255, 255, 255, 0.2);
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
    text-align: center;
    border-radius: 25px;
    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+   overflow-y: auto;
 }
 input{
     border-color: aliceblue;
@@ -203,7 +206,9 @@ label {
 @media (min-width: 1025px) {
     .logim {
         width: 500px;
-        height: 500px;
+        height: auto;
+        min-height: 900px;
+        padding: 40px 20px;
     }
     
     input {
